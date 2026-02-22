@@ -4,9 +4,7 @@
 
 This project implements a secure, real-time **Internet of Things (IoT)** data pipeline by treating Vélib' bike-sharing stations as a network of smart connected devices constantly transmitting live data. The system collects real-time station information via the JCDecaux API, streams it through Apache Kafka, encrypts sensitive fields using AES symmetric encryption, and stores the secured records in MongoDB. The primary focus is on demonstrating how IoT data can be protected throughout a streaming pipeline — from ingestion to storage.
 
-> **Workshop** — Master Data Science & Big Data (DSBD)
-> **By:** Amghar Hind, Dekdegue Hajar, Bridila Hind
-> **Directed by:** Khadija Achtaich
+
 
 ## Motivation and Importance
 
@@ -76,18 +74,18 @@ Each station object returned by the API contains the following fields:
 
 | Field | Description | Encrypted |
 |---|---|---|
-| `address` | Street address of the station | ✅ Yes |
-| `contract_name` | Name of the Vélib' system / city | ✅ Yes |
-| `position` | Latitude and longitude coordinates | ❌ No |
-| `available_bikes` | Number of bikes currently available | ❌ No |
-| `available_bike_stands` | Number of free docking stands | ❌ No |
-| `bike_stands` | Total capacity of the station | ❌ No |
-| `status` | Station status (`OPEN` / `CLOSED`) | ❌ No |
-| `last_update` | Timestamp of the last data update | ❌ No |
-| `name` | Station name | ❌ No |
-| `number` | Unique station identifier | ❌ No |
-| `banking` | Whether the station has a payment terminal | ❌ No |
-| `bonus` | Whether the station is part of a bonus program | ❌ No |
+| `address` | Street address of the station |  Yes |
+| `contract_name` | Name of the Vélib' system / city |  Yes |
+| `position` | Latitude and longitude coordinates |  No |
+| `available_bikes` | Number of bikes currently available |  No |
+| `available_bike_stands` | Number of free docking stands |  No |
+| `bike_stands` | Total capacity of the station |  No |
+| `status` | Station status (`OPEN` / `CLOSED`) |  No |
+| `last_update` | Timestamp of the last data update |  No |
+| `name` | Station name |  No |
+| `number` | Unique station identifier |  No |
+| `banking` | Whether the station has a payment terminal |  No |
+| `bonus` | Whether the station is part of a bonus program |  No |
 
 ### Getting an API Key
 
